@@ -34,6 +34,7 @@ download_mod() {
   echo "Added \${label}: \${filename}"
 }
 
+download_mod "fabric-api" "Fabric API"
 download_mod "sodium" "Sodium"
 download_mod "lithium" "Lithium"
 download_mod "ferrite-core" "FerriteCore"
