@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "darkboost",
+  "version": "${version}",
+  "name": "DarkBoost",
+  "description": "A client-side performance and configuration mod.",
+  "authors": ["DarkGamer3234"],
+  "contact": {
+    "sources": "https://github.com/DarkGamer3234/darkboost"
+  },
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.darkboost.DarkBoostClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": ">=0.160.5"
+  }
+}
