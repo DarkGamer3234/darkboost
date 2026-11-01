@@ -8,6 +8,7 @@ The GitHub Actions build assembles an installable ZIP containing separate, compa
 
 | Mod | What it optimises |
 |---|---|
+| Fabric API | Required Fabric library |
 | DarkBoost | This project's own client mod |
 | Sodium | Replaces the world renderer for higher FPS |
 | Lithium | Optimises game logic, physics and ticking |
@@ -44,7 +45,7 @@ The GitHub Actions workflow builds the DarkBoost JAR, resolves the latest stable
 - Minecraft Java Edition 26.3
 - Fabric Loader 0.19.5 or newer
 - Java 25
-- Fabric API (declared as a DarkBoost dependency)
+- Fabric API (included in the performance pack)
 
 ## ReplayMod
 
