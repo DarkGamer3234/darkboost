@@ -56,6 +56,7 @@ INSTALL
 4. Launch the Fabric 26.3 profile.
 
 INCLUDED
+- Fabric API: required modding library.
 - DarkBoost: this project's own client mod.
 - Sodium: faster world rendering.
 - Lithium: optimised game logic and ticking.
