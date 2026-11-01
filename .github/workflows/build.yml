@@ -28,11 +28,19 @@ jobs:
         with:
           gradle-version: '9.8.0'
 
-      - name: Build mod
+      - name: Build DarkBoost mod
         run: gradle build
 
-      - name: Upload build artifacts
+      - name: Install pack tools
+        run: sudo apt-get update && sudo apt-get install -y jq zip
+
+      - name: Assemble Minecraft 26.3 performance pack
+        run: bash scripts/build-pack.sh
+
+      - name: Upload DarkBoost mod and performance pack
         uses: actions/upload-artifact@v4
         with:
-          name: DarkBoost-build
-          path: build/libs/*.jar
+          name: DarkBoost-26.3-Fabric
+          path: |
+            build/libs/*.jar
+            dist/*.zip
