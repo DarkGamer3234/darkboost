@@ -17,7 +17,6 @@ dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     implementation "net.fabricmc:fabric-loader:${project.loader_version}"
     implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
-    annotationProcessor "net.fabricmc:sponge-mixin:0.15.0+mixin.0.8.7"
 }
 
 processResources {
