@@ -20,13 +20,8 @@ public abstract class ServerPackManagerMixin {
     private PackLoadFeedback packLoadFeedback;
 
     @Inject(method = "pushPack", at = @At("HEAD"), cancellable = true)
-    private void darkboost$pretendPackWasApplied(UUID id, URL url, HashCode hash, CallbackInfo ci) {
-        if (!PackSpooferConfig.isEnabled()) {
-            return;
-        }
-
-        // Report the same accepted/applied lifecycle feedback Minecraft normally sends,
-        // but cancel the normal download and resource reload.
+    private void packspoofer$pretendPackWasApplied(UUID id, URL url, HashCode hash, CallbackInfo ci) {
+        if (!PackSpooferConfig.isEnabledForCurrentServer()) return;
         this.packLoadFeedback.reportUpdate(id, PackLoadFeedback.Update.ACCEPTED);
         this.packLoadFeedback.reportFinalResult(id, PackLoadFeedback.FinalResult.APPLIED);
         ci.cancel();
