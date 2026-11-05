@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "darkboost",
   "version": "${version}",
-  "name": "DarkBoost",
-  "description": "A client-side performance and configuration mod.",
+  "name": "PackSpoofer",
+  "description": "Client-side mod that can report server resource packs as applied without downloading or loading them.",
   "authors": ["DarkGamer3234"],
   "contact": {
     "sources": "https://github.com/DarkGamer3234/darkboost"
@@ -15,6 +15,9 @@
       "dev.darkboost.DarkBoostClient"
     ]
   },
+  "mixins": [
+    "darkboost.mixins.json"
+  ],
   "depends": {
     "fabricloader": ">=0.19.5",
     "minecraft": "~26.3",
