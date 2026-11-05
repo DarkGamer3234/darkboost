@@ -10,6 +10,7 @@ public final class DarkBoostClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        LOGGER.info("DarkBoost {} initialised.", "0.1.0");
+        PackSpooferConfig.load();
+        LOGGER.info("PackSpoofer initialised for Minecraft 26.3.");
     }
 }
