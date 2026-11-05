@@ -1,4 +1,4 @@
-name: Build DarkBoost
+name: Build PackSpoofer
 
 on:
   push:
@@ -28,19 +28,11 @@ jobs:
         with:
           gradle-version: '9.8.0'
 
-      - name: Build DarkBoost mod
+      - name: Build PackSpoofer
         run: gradle build
 
-      - name: Install pack tools
-        run: sudo apt-get update && sudo apt-get install -y jq zip
-
-      - name: Assemble Minecraft 26.3 performance pack
-        run: bash scripts/build-pack.sh
-
-      - name: Upload DarkBoost mod and performance pack
+      - name: Upload mod JAR
         uses: actions/upload-artifact@v4
         with:
-          name: DarkBoost-26.3-Fabric
-          path: |
-            build/libs/*.jar
-            dist/*.zip
+          name: PackSpoofer-Minecraft-26.3
+          path: build/libs/*.jar
